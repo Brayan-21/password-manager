@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Gerenciador de Senhas",
+  "version": "1.0",
+  "description": "Gerencie suas contas e senhas organizadas em pastas",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "pasta.png",
+      "48": "pasta.png",
+      "128": "pasta.png"
+    }
+  },
+  "icons": {
+    "16": "pasta.png",
+    "48": "pasta.png",
+    "128": "pasta.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
